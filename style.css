@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.5rem;
+  display: grid;
+  margin: 1.5rem 0;
+}
+
+.selectContainer {
+  margin: auto;
+  display: inline-block;
+}
+
+select {
+  width: 100px;
+}
+
+.container {
+  width: 80%;
+  height: 120px;
+  border: 1px solid black;
+  margin: auto;
+  display: none;
+  padding: 1rem 1rem;
+  margin: 1.5rem auto;
+  justify-content: start;
+  align-content: space-between;
+}
+
+h1 {
+  font-size: 1.7rem;
+}
+
+p {
+  font-size: 1.3rem;
+}
+
+.info {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.dose {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+}

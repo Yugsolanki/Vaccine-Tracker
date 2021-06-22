@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vaccine Tracker</title>
+    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+    <script src="vendor.js" defer></script>
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+  
+  <div class="selectContainer">
+    <select name="location" id="location">
+      <option value="400079">Vikhroli</option>
+      <option value="400086" onclick="hello()">Ghatkopar (West)</option>
+      <option value="400077" selected>Ghatkopar (East)</option>
+      <option value="400075" onclick="hello() ">Pantnagar</option>
+    </select>
+  
+    <select name="age" id="age">
+      <option value="18">18</option>
+      <option value="30">30</option>
+      <option value="45" selected>45</option>
+    </select>
+    <input type="date" name="date" id="date" min="1997-01-01" max="2030-12-13"/>
+  </div>
+  
+
+  <div class="container">
+    <h1 class="name"></h1>
+    <p class="address"></p>
+    
+    <div class="info">
+      <span class="age"></span>
+      <span class="fee"></span>
+    </div>
+    
+    <div class="dose">
+      <span class="dose1"></span>
+      <span class="dose2"></span>
+    </div>
+  </div>
+
+</body>
+
+</html>
