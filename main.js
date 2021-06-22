@@ -28,7 +28,7 @@ var sessionsCount = {};
 var sessions = {};
 
 
-fetch(`https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin?pincode=${locationNode.value}&date=23-06-2021`)
+fetch(`https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin?pincode=${locationNode.value}&date=${date}`)
   .then(response => {return response.json()})
   .then(res => {
     sessionsCount = res.sessions;
