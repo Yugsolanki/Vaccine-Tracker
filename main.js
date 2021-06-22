@@ -1,5 +1,9 @@
 var submit = document.getElementById('submit');
 
+window.onload = (event) => {
+  submit.click();
+};
+
 submit.addEventListener('click', ()=> {
   while (sectionElement.firstChild) {
     sectionElement.removeChild(sectionElement.lastChild);
@@ -76,6 +80,3 @@ setTimeout(()=>{
 
 }
 
-window.onload = (event) => {
-  submit.click()
-};
