@@ -34,11 +34,14 @@ fetch(`https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin?pi
     sessionsCount = res.sessions;
   })
   
-  if (sessionsCount.length>0) {
-    sessions = sessionsCount
-  } else {
-    alert('Sorry no vaccine slots are available on this pincode, age limit and date.')
-  }
+  setTimeout(()=>{
+    if (sessionsCount.length>0) {
+      sessions = sessionsCount
+    } else {
+      alert('Sorry no vaccine slots are available on this pincode, age limit and date.')
+    }
+  }, 100)
+  
 //sessions[i]
 
 setTimeout(()=>{

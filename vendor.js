@@ -27,6 +27,17 @@ dose2Node = document.querySelector('.dose2')
 } 
 
 vendor();
+
+document.addEventListener('DOMContentLoaded', () => {
+  (document.querySelectorAll('.notification .delete') || []).forEach(($delete) => {
+    const $notification = $delete.parentNode;
+
+    $delete.addEventListener('click', () => {
+      $notification.parentNode.removeChild($notification);
+    });
+  });
+});
+
 /*
 State :- 21
 District :- 395
