@@ -1,29 +1,32 @@
-var locationNode, dateNode, containerNode, nameNode, addressNode, ageNode, feeNode, dose1Node, dose2Node;
+var locationNode, /*dateNode ,*/ sectionElement, containerNode, nameNode, addressNode, ageNode, feeNode, dose1Node, dose2Node, date;
 
-function hello() {
+function vendor() {
   
-const locationNode = document.querySelector('#location').value;
+locationNode = document.querySelector('#location')
 
-const ageSelectNode = document.querySelector('#age').value
+ageSelectNode = document.querySelector('#age')
 
+//dateNode = document.querySelector('#date').value;
 
-var dateNode = document.getElementById('date').value;
+sectionElement = document.querySelector("section");
 
-const containerNode = document.querySelector('.container');
+containerNode = document.querySelector('.mainbox');
 
-var nameNode = document.querySelector('.name').innerText;
+nameNode = document.querySelector('.name')
 
-var addressNode = document.querySelector('.address').innerText
+addressNode = document.querySelector('.address')
 
-var ageNode = document.querySelector('.age').innerText;
+ageNode = document.querySelector('.age')
 
-var feeNode = document.querySelector('.fee').innerText;
+feeNode = document.querySelector('.fee')
 
-var dose1Node = document.querySelector('.dose1').innerText;
+dose1Node = document.querySelector('.dose1')
 
-var dose2Node = document.querySelector('.dose2').innerText;
+dose2Node = document.querySelector('.dose2')
 
 } 
+
+vendor();
 /*
 State :- 21
 District :- 395
