@@ -13,21 +13,6 @@ body {
   display: grid;
 }
 
-nav {
-  width: 100%;
-  height: 45px;
-  display: grid;
-  align-content: center;
-  padding: 2px 8px;
-  box-shadow: 0 0.5em 1em -0.125em rgba(10,10,10,0.1), 0 0px 0 1px rgba(10,10,10, 0.02);
-  background-color: #2196f3;
-  font-size: 1.5rem;
-  color: white;
-}
-.h1 {
-  font-weight: 800;
-}
-
 .selectContainer {
   width: 100%;
   margin: 2rem auto 0 auto;
