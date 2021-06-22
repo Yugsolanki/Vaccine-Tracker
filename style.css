@@ -56,23 +56,30 @@ body {
 }
 
 h1 {
-  font-size: 1.7rem;
+  font-size: 1.2rem !important;
 }
 
 p {
-  font-size: 1.3rem;
+  font-size: 1rem !important;
+  color: #747479 !important;
+}
+
+hr {
+  margin: .5rem 0 !important;
 }
 
 .info {
-  width: 70%;
+  width: 80%;
   display: flex;
   justify-content: space-between;
+  font-weight: 500;
 }
 
 .dose {
-  width: 70%;
+  width: 80%;
   display: flex;
   justify-content: space-between;
+  font-weight: 500;
 }
 
 #date {
