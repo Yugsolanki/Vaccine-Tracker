@@ -57,19 +57,21 @@ setTimeout(()=>{
       class data {
         constructor(name, address, age, fee, dose1, dose2, pincode) {
           
-          let cloneDiv = containerNode.cloneNode(true)
-          
-          sectionElement.appendChild(cloneDiv);
-          containerNode.style.display = 'grid'
           
           this.container = containerNode;
           
           this.container.querySelector('.name').innerText = name;
           this.container.querySelector('.address').innerText = address+' '+pincode;
-          this.container.querySelector('.age').innerText = `Age: ${ageSelectNode.value}`;
+          this.container.querySelector('.age').innerText = `Age: ${age}`;
           this.container.querySelector('.fee').innerText = `Fee: ${fee}`;
           this.container.querySelector('.dose1').innerText = `Dose 1: ${dose1}`;
           this.container.querySelector('.dose2').innerText = `Dose 2: ${dose2}`;
+          
+          let cloneDiv = containerNode.cloneNode(true)
+          
+          sectionElement.appendChild(cloneDiv);
+          containerNode.style.display = 'grid'
+          
         }
       }
       
