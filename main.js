@@ -6,6 +6,7 @@ submit.addEventListener('click', ()=> {
 locationNode.addEventListener('change', start)
 ageNode.addEventListener('change', start)
 
+
 function start() {
   while (sectionElement.firstChild) {
     sectionElement.removeChild(sectionElement.lastChild);
@@ -38,10 +39,10 @@ function main() {
     
     for (var i = 0; i < sessions.length; i++) {
       
-      let {name, address, min_age_limit: age, fee, available_capacity_dose1: dose1, available_capacity_dose2: dose2, pincode} = sessions[i];
+      let {name, address, min_age_limit: age, fee, available_capacity_dose1: dose1, available_capacity_dose2: dose2, pincode, vaccine} = sessions[i];
       
       class data {
-          constructor(name, address, pincode, age, fee, dose1, dose2) {
+          constructor(name, address, pincode, age, fee, dose1, dose2, vaccine) {
             
             this.container = containerNode;
             
@@ -51,6 +52,7 @@ function main() {
             this.container.querySelector('.fee').innerText = `Fee: ${fee}`;
             this.container.querySelector('.dose1').innerText = `Dose 1: ${dose1}`;
             this.container.querySelector('.dose2').innerText = `Dose 2: ${dose2}`;
+            this.container.querySelector('.vaccine').innerText = `${vaccine}`;
             
             let cloneDiv = containerNode.cloneNode(true)
             
@@ -62,11 +64,12 @@ function main() {
       
       if (age==ageSelectNode.value && (dose1>0 || dose2>0)) {
         errorNode.style.display = 'none'
-        let print = new data(name, address, pincode, age, fee, dose1, dose2);
+        let print = new data(name, address, pincode, age, fee, dose1, dose2, vaccine);
+        
       } else {
         errorNode.classList.remove('is-danger')
-        errorNode.classList.add('is-info');
-        errorMsg('No more vaccination sessions available. On the given pincode and age limit.')
+        errorNode.classList.add('is-link');
+        errorMsg('No more vaccination slots available. On the given pincode and age limit.')
       }
     }//for
   }, 1000)//setTimeout

@@ -1,4 +1,4 @@
-let locationNode, /*dateNode ,*/ sectionElement, containerNode, nameNode, addressNode, ageNode, feeNode, dose1Node, dose2Node, date, submit, errorNode;
+let locationNode, /*dateNode ,*/ sectionElement, containerNode, nameNode, addressNode, ageNode, feeNode, dose1Node, dose2Node, vaccineNode, date, submit, errorNode;
 
 function vendor() {
   submit = document.getElementById('submit');
@@ -24,6 +24,8 @@ function vendor() {
   dose1Node = document.querySelector('.dose1');
   
   dose2Node = document.querySelector('.dose2');
+  
+  vaccineNode = document.querySelector('.vaccine')
   
   errorNode = document.querySelector('.error')
 
