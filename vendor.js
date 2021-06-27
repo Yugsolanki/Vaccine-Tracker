@@ -1,31 +1,33 @@
-var locationNode, /*dateNode ,*/ sectionElement, containerNode, nameNode, addressNode, ageNode, feeNode, dose1Node, dose2Node, date;
+let locationNode, /*dateNode ,*/ sectionElement, containerNode, nameNode, addressNode, ageNode, feeNode, dose1Node, dose2Node, date, submit, errorNode;
 
 function vendor() {
+  submit = document.getElementById('submit');
   
-locationNode = document.querySelector('#location')
-
-ageSelectNode = document.querySelector('#age')
-
-//dateNode = document.querySelector('#date').value;
-
-sectionElement = document.querySelector("section");
-
-containerNode = document.querySelector('.mainbox');
-
-nameNode = document.querySelector('.name')
-
-addressNode = document.querySelector('.address')
-
-ageNode = document.querySelector('.age')
-
-feeNode = document.querySelector('.fee')
-
-dose1Node = document.querySelector('.dose1')
-
-dose2Node = document.querySelector('.dose2')
+  locationNode = document.querySelector('#location');
+  
+  ageSelectNode = document.querySelector('#age');
+  
+  //dateNode = document.querySelector('#date').value;
+  
+  sectionElement = document.querySelector("section");
+  
+  containerNode = document.querySelector('.mainbox');
+  
+  nameNode = document.querySelector('.name');
+  
+  addressNode = document.querySelector('.address');
+  
+  ageNode = document.querySelector('.age');
+  
+  feeNode = document.querySelector('.fee');
+  
+  dose1Node = document.querySelector('.dose1');
+  
+  dose2Node = document.querySelector('.dose2');
+  
+  errorNode = document.querySelector('.error')
 
 } 
-
 vendor();
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -37,6 +39,25 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+function getDate() {
+  var today = new Date();
+  var dd = String(today.getDate()).padStart(2, '0');
+  var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+  var yyyy = today.getFullYear();
+
+  today = dd + '-' + mm + '-' + yyyy;
+
+  if (!date) {
+    date = today
+  }
+}
+getDate();
+
+function errorMsg(msg) {
+  errorNode.textContent = msg;
+  errorNode.style.display = 'block'
+}
 
 /*
 State :- 21

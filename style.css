@@ -15,7 +15,7 @@ body {
   display: grid;
 }
 
-.notification {
+.noti {
   padding: 10px 13px 10px 10px !important;
   position: relative !important;
   border-radius: 0 0 4px 4px !important;
@@ -24,7 +24,7 @@ body {
 
 .selectContainer {
   width: 100%;
-  margin: 1.5rem auto 1.5rem auto;
+  margin: 2rem auto 1.5rem auto;
   display: flex;
   flex-flow: row;
   justify-content: space-evenly;
@@ -56,11 +56,11 @@ body {
 }
 
 h1 {
-  font-size: 1.2rem !important;
+  font-size: 1.1rem !important;
 }
 
 p {
-  font-size: 1rem !important;
+  font-size: .9rem !important;
   color: #747479 !important;
 }
 
@@ -73,6 +73,7 @@ hr {
   display: flex;
   justify-content: space-between;
   font-weight: 500;
+  font-size: .9rem;
 }
 
 .dose {
@@ -80,8 +81,17 @@ hr {
   display: flex;
   justify-content: space-between;
   font-weight: 500;
+  font-size: .9rem;
 }
 
 #date {
   width: 100px;
+}
+
+.error {
+  width: 80%;
+  margin: -2rem auto;
+  padding: 10px !important;
+  text-align: center;
+  display: none;
 }

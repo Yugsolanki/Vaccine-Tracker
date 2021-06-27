@@ -12,22 +12,22 @@
     <link rel="stylesheet" href="style.css" type="text/css" media="all" />
     <link rel="stylesheet" href="assets/bulma.css" type="text/css" media="all" />
     <script src="assets/bulma.js" type="text/javascript" charset="utf-8"></script>
-    <script src="vendor.js" defer></script>
-    <script src="main.js" defer></script>
+    
     
 </head>
 
 <body>
   
-  <div class="notification is-danger is-light">
+  <div class="notification noti is-warning is-light">
     <button class="delete"></button>
     This just a project, you can't book vaccine from here. To book vaccine go to <a href="https://selfregistration.cowin.gov.in/" target="_blank">Cowin.in</a>. You can only look today's vaccines.
   </div>
   
   <div class="selectContainer">
     <div class="select">
-      <select name="location" id="location">
-        <option value="400079" selected>Vikhroli</option>
+      <select name="location" id="location" onchange="start()">
+        <option selected>Choose Pincode</option>
+        <option value="400071">Vikhroli</option>
         <option value="400086">Ghatkopar (West)</option>
         <option value="400077">Ghatkopar (East)</option>
         <option value="400075">Pantnagar</option>
@@ -44,7 +44,7 @@
     </div>
     
     <div class="select">
-      <select name="age" id="age">
+      <select name="age" id="age" onchange="start()">
         <option value="18">18</option>
         <option value="30">30</option>
         <option value="45" selected>45</option>
@@ -52,8 +52,6 @@
     </div>
     
     <!--<input type="date" id="date" value=""/>-->
-
-    <button type="submit" id="submit" class="button">Submit</button>
   </div>
   
   
@@ -73,7 +71,11 @@
     </div>
   </div>
   </section>
+  
+  <div class="notification error is-danger"></div>
 
+  <script src="vendor.js"></script>
+  <script src="main.js"></script>
 </body>
 
 </html>
